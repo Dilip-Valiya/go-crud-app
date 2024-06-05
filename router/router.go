@@ -16,5 +16,7 @@ func InitializeRouter() *mux.Router {
 	router.HandleFunc("/todos", handlers.CreateTodo).Methods("POST")
 	router.HandleFunc("/todos", handlers.GetTodos).Methods("GET")
 	router.HandleFunc("/todos/{id}", handlers.UpdateTodo).Methods("PUT")
+	router.HandleFunc("/login", handlers.Login).Methods("POST")
+	router.HandleFunc("/signup", handlers.SignUp).Methods("POST")
 	return router
 }
